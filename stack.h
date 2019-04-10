@@ -16,22 +16,15 @@ enum BracketType {ROUND=0, SQUARE=1, CURLY=2};
  
 //Our items are of type Bracket
 typedef struct { 
-    enum BracketType type;
+    int type;
     int position;
 }Bracket;
-
-// A structure to represent a stack node for a linked list
-typedef struct StackNode 
-{ 
-    Bracket data; 
-    struct StackNode* next; 
-}StackNode; 
 
 // A structure to represent a stack 
 typedef struct  {       
     unsigned capacity;
 	int top;	
-    //TODO: depending on the implementation - fill-in the fields of a struct
+    Bracket *array;
 }Stack; 
 
 
